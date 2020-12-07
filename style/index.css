@@ -1,10 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&display=swap');
 
 /* Add CSS styling here */
+/* * {
+    border:1px solid black;
+} */
 body {
+
     width:100%;
-    margin: 0 0;
+    margin:auto auto;
     font-family: 'IBM Plex Sans', sans-serif;
+    /* margin:50px 0px; */
+    /* display:grid; */
+    display:flexbox;
 }
 .top {
     /* border: 1px solid black; */
@@ -13,14 +20,20 @@ body {
     width:100%;
 }
 
-.name {
+.top .name {
     /* border: 1px solid black; */
 
     color:#ffffff;
-    margin: 0 20px 0 20px;
-    padding:20px 20px;
+    /* margin: 0 20px 0 20px; */
+    /* padding:20px 20px; */
+    padding:20px 20px 0 20px;
 }
-.navigation nav { 
+
+.top .navigation {
+    background-color: #ffffff;
+}
+
+.top .navigation nav { 
     /* border: 1px solid yellow; */
 
     display:flex;
@@ -31,7 +44,7 @@ body {
     /*width:100%;*/
     text-align:center;
 }
-.navigation a {
+.top .navigation a {
     /* border: 1px solid black; */
 
     color:#eb3a45;
@@ -42,7 +55,7 @@ body {
     text-decoration: none;
     transition: 0.3s;
 }
-.navigation a:hover {
+.top .navigation a:hover {
     /* border: 1px solid black; */
 
     color:#ffffff;
@@ -52,19 +65,25 @@ body {
     text-decoration: none;
 }
 .intro {
-    /* border: 1px solid black; */
+    border: 1px solid black;
     display:flex;
     justify-content:center;
     align-items:center;
-    padding:50px;
+    /* padding:50px; */
+    padding:2vh 2vw;
+    margin:0 auto 0 auto;
+    width:100%;
+    height:800px;
 
 }
-.profile-pic {
+.intro img{
     /* border: 1px solid black; */
-    border-radius:5px;
+    /* margin:20px 20px; */
+    border-radius:10px;
+    /* margin:7%; */
     object-fit:fill;
     width:600px;
-    height:400px
+    height:400px;
 
 }
 .blurb {
@@ -92,7 +111,6 @@ section {
 
 .project {
     /* border: 1px solid black; */
-    
     background:url(https://picsum.photos/150);
     width:150px;
     height:150px;
@@ -158,4 +176,34 @@ section {
 .body {
     border: 1px solid black;
     padding: 0 0 0 50px;
+}
+
+/* Tablet view */
+@media (max-width:800px){
+    body{
+        background-color: yellow;
+    }
+
+    .intro {
+        display:flex;
+        justify-content: center;
+        align-content: center;
+        /* overflow:auto; */
+        /* margin: 5%; */
+        margin:12% auto 0 auto;
+        display:inline;
+        /* padding: 10% 5vw 0 5vw; */
+        align-content: center;
+        width:100%;
+    }
+    .intro img {
+        margin:0 auto 0 auto;
+        width:50%;
+        height:50%;
+    }
+}
+
+/* Phone view */
+@media (max-width:500px){
+
 }
